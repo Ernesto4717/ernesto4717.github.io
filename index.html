@@ -1,36 +1,88 @@
 <!DOCTYPE html>
-<html ng-app="pageTest">
+<html lang="es" ng-app="VerticeApp">
 <head>
-  <title></title>
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Congreso Internacional Vertice</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <nav class="navbar navbar-inverse" ng-controller="TabController as tab">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="#">WebSiteName</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li ng-class="{ active:tab.isSet(1) }"><a href ng-click="tab.setTab(1)">Home</a></li>
-          <li ng-class="{ active:tab.isSet(2) }"><a href ng-click="tab.setTab(2)">Page 1</a></li>
-          <li><a href >Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body data-spy="scroll" data-target="#site-nav" ng-controller="TabController as tab">
+    <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- logo -->
+                <div class="site-branding">
+                    <a class="logo" href ng-click="tab.setTab(1)">
+
+                        <!-- logo image  -->
+                        <img src="images/logo-vertice.png" alt="Logo">
+
+                        Vertice 2017
+                    </a>
+                </div>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div><!-- /.navbar-header -->
+
+            <div class="collapse navbar-collapse" id="navbar-items">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <!-- navigation menu -->
+                    <li ng-class="{ active:tab.isSet(1) }"><a href ng-click="tab.setTab(1)">Pagina Principal</a></li>
+                    <li ng-class="{ active:tab.isSet(2) }"><a href ng-click="tab.setTab(2)">Arquitectura</a></li>
+                    <li ng-class="{ active:tab.isSet(3) }"><a href ng-click="tab.setTab(3)">Bioingenieria</a></li>
+                    <li ng-class="{ active:tab.isSet(4) }"><a href ng-click="tab.setTab(4)">Ing. Civil</a></li>
+                    <li ng-class="{ active:tab.isSet(5) }"><a href ng-click="tab.setTab(5)">Ing. Industrial</a></li> 
+
+                </ul>
+            </div>
+        </div><!-- /.container -->
+    </nav>
 
 <!-- Contenidos de la pagina, mostrados mediante Angular --> 
-<home ng-show="tab.isSet(1)"></home>
+<div ng-show="tab.isSet(1)" ng-include="'home.html'"></div>
+<div ng-show="tab.isSet(2)" ng-include="'Arquitectura.html'"></div>
+<div ng-show="tab.isSet(3)" ng-include="'Bioingenieria.html'"></div>
+<div ng-show="tab.isSet(4)" ng-include="'Civil.html'"></div>
+<div ng-show="tab.isSet(5)" ng-include="'Industrial.html'"></div>
+
+
+<!-- footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <p class="site-info"><a href="https://www.facebook.com/somibuabcens/" target="_blank"> Capitulo Estudiantil SOMIB UABC Ensenada</a></p>
+                  <ul class="social-block">
+                   <li><p>Redes sociales: </p></li>
+                   <li><a href="https://www.facebook.com/verticeuabc" target="_blank"><i class="ion-social-facebook"></i></a></li>
+                   <li><a href="https://www.instagram.com/congresovertice" target="_blank"><i class="ion-social-instagram"></i></a></li>
+                   <p class="site-info">Designed and Developed by <a>Vikingos Web Design</a></p>
+               </ul>
+           </div>
+       </div>
+   </div>
+</footer>
+
+<!-- script -->
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
