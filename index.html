@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="pageTest">
+<head>
+  <title></title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse" ng-controller="TabController as tab">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active:tab.isSet(1) }"><a href ng-click="tab.setTab(1)">Home</a></li>
+          <li ng-class="{ active:tab.isSet(2) }"><a href ng-click="tab.setTab(2)">Page 1</a></li>
+          <li><a href >Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Contenidos de la pagina, mostrados mediante Angular --> 
+<home ng-show="tab.isSet(1)"></home>
+</body>
+</html>
