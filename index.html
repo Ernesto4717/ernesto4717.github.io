@@ -46,6 +46,7 @@
                     <li ng-class="{ active:tab.isSet(3) }"><a href ng-click="tab.setTab(3)">Bioingenieria</a></li>
                     <li ng-class="{ active:tab.isSet(4) }"><a href ng-click="tab.setTab(4)">Ing. Civil</a></li>
                     <li ng-class="{ active:tab.isSet(5) }"><a href ng-click="tab.setTab(5)">Ing. Industrial</a></li> 
+                    <li ng-class="{ active:tab.isSet(6) }"><a href ng-click="tab.setTab(6)">Registro</a></li>
 
                 </ul>
             </div>
@@ -58,10 +59,11 @@
 <div ng-show="tab.isSet(3)" ng-include="'Bioingenieria.html'"></div>
 <div ng-show="tab.isSet(4)" ng-include="'Civil.html'"></div>
 <div ng-show="tab.isSet(5)" ng-include="'Industrial.html'"></div>
+<div ng-show="tab.isSet(6)" ng-include="'Registro.html'"></div>
 
 
 <!-- footer -->
-    <footer class="site-footer">
+    <footer ng-hide="tab.isSet(6)" class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
