@@ -8,5 +8,6 @@ app.controller("TabController", function() {
 
     this.setTab = function(setTab) {
       this.tab = setTab;
+        (window).scrollTo(0,0);
     };
   });
