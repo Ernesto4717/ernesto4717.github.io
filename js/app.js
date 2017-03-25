@@ -38,16 +38,13 @@ app.controller('dateController', function() {
         this.horas=Math.floor(diferencia/3600)
         diferencia=diferencia-(3600*this.horas)
         this.minutos=Math.floor(diferencia/60)
-    console.log("Tiempo restante: " + this.dias +":" + this.horas + ":" + this.minutos);
 });
 
 app.controller('navController', function($route) {
     this.$route = $route;
-    console.log(this.$route);
 });
 
 app.controller('TabController', function() {
-    console.log("unexpected here");
     this.tab = 1;
     this.isSet = function(checkTab) {
         return this.tab === checkTab;
