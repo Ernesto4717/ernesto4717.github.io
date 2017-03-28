@@ -680,13 +680,14 @@ ul li {
     height: 90%;
     border: none;
 }
-#countdown-timer {
+.countdown {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
     font-weight: 700;
-    margin: 0 -30px;
 }
 #countdown-timer >span {
-    display: block;
-    float: left;
+    display: inline-block;
     font-size: 48px;
     line-height: 1;
     color: #fff;
@@ -717,18 +718,10 @@ ul li {
 #countdown-timer:after {
     content: " ";
     display: table;
+
 }
 #countdown-timer:after {
     clear: both;
-}
-.countdown-timer-title {
-    color: #fff;
-    font-size: 62px;
-    line-height: 1;
-    text-transform: uppercase;
-}
-.countdown-timer-subtitle {
-    color: #fff;
 }
 @media only screen and (max-width: 768px) {
     #countdown-timer {
@@ -744,12 +737,3 @@ ul li {
     .countdown-timer-title {
         font-size: 48px;
     }
-}
-.sp-comingsoon #countdown-timer {
-    display: inline-block;
-    margin: 0 -20px;
-}
-.sp-comingsoon #countdown-timer span {
-    text-align: center;
-    margin: 0 20px;
-}

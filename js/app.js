@@ -40,7 +40,7 @@ app.controller('dateController', function() {
     //    this.minutos=Math.floor(diferencia/60)
     $('#countdown-timer').countdown('2017/4/26 10:30:00', function(event) {
         console.log("documento");
-        $(this).html("hola"+event.strftime("<span class='timer-day'>%D<span>%!D:Day,Días;</span></span><span class='timer-hour'>%H<span>%!H:Hour,Horas;</span></span><span class='timer-minute'>%M<span>%!M:Minute,Minutos;</span></span><span class='timer-second'>%S<span>%!S:Second,Segundos;</span></span>"));
+        $(this).html(event.strftime("<span class='timer-day'>%D<span>%!D:Day,Días;</span></span><span class='timer-hour'>%H<span>%!H:Hour,Horas;</span></span><span class='timer-minute'>%M<span>%!M:Minute,Minutos;</span></span><span class='timer-second'>%S<span>%!S:Second,Segundos;</span></span>"));
     });
 });
 
