@@ -40,8 +40,8 @@ app.controller('dateController', function() {
         this.minutos=Math.floor(diferencia/60)
 });
 
-app.controller('navController', function($route) {
-    this.$route = $route;
+app.controller('navController', function($scope,$route) {
+    $scope.$route = $route;
 });
 
 app.controller('TabController', function() {
