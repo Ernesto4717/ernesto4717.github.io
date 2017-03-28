@@ -682,7 +682,6 @@ ul li {
 }
 .countdown {
     text-align: center;
-    width: 60%;
     margin: 0 auto;
     font-weight: 700;
 }
@@ -745,4 +744,8 @@ ul li {
         width: 75%;
         margin-left: 12.5%;
     }
+}
+
+.img-responsive {
+    min-width: 100%;
 }
