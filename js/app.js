@@ -25,7 +25,8 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     })
         .when("/About", {
         templateUrl : "About.html"
-    });
+    })
+    .otherwise("/");
     $locationProvider.html5Mode(true);
 }]);
 
