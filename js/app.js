@@ -44,8 +44,8 @@ app.controller('dateController', function() {
     });
 });
 
-app.controller('navController', function($route) {
-    this.$route = $route;
+app.controller('navController', function($scope,$route) {
+    $scope.$route = $route;
 });
 
 app.controller('TabController', function() {
