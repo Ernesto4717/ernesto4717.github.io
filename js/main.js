@@ -12,12 +12,7 @@ $('div>ul>li>a').click(function(){
 $('#toggle-navbar').click(function(){
     $('#navbar-items').toggle();
 });
-$(function(){
- $('#contador').countdown('2017/10/10', function(event) {
-    console.log("documento");
-    $(this).html(event.strftime('%d days %H:%M:%S'));
-  });
-});
+
     /*
  * Change Navbar color while scrolling
  */

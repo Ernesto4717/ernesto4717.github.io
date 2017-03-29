@@ -12,6 +12,7 @@ html {
 
 body {
     color: #4e4e4e;
+    background-color: rgb(223,213,6);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -682,8 +683,17 @@ ul li {
 }
 .countdown {
     text-align: center;
+    color: #fff200;
+    background-color: #333;
     margin: 0 auto;
     font-weight: 700;
+}
+.countdown >h1 {
+    margin-top: 0px;
+    padding-bottom: 1em;
+}
+.links {
+    text-align: center;
 }
 #countdown-timer >span {
     display: inline-block;
@@ -694,16 +704,16 @@ ul li {
     margin: 0 30px;
 }
 #countdown-timer >span.timer-day {
-    color: #fff200;
+    color: #fff;
 }
 #countdown-timer >span.timer-hour {
-    color: #ff8a00;
+    color: #fff;
 }
 #countdown-timer >span.timer-minute {
-    color: #00b9ff;
+    color: #fff;
 }
 #countdown-timer >span.timer-second {
-    color: #8dc63f;
+    color: #fff;
 }
 #countdown-timer >span >span {
     display: block;
@@ -724,7 +734,7 @@ ul li {
 }
 @media only screen and (max-width: 768px) {
     #countdown-timer {
-        margin: 0 -10px;
+        margin: 0 10px;
     }
     #countdown-timer >span {
         font-size: 24px;
@@ -737,15 +747,16 @@ ul li {
         font-size: 48px;
     }
 }
-@media only screen and (min-width: 768px) {
-    
-    .flyer{
-        position: relative;
-        width: 75%;
-        margin-left: 12.5%;
-    }
-}
-
 .img-responsive {
     min-width: 100%;
 }
+@media only screen and (min-width: 768px) {
+
+    .img-flyer{
+        position: relative;
+        width: 75%;
+        margin-left: 12.5%;
+        min-width: 0%;
+    }
+}
+
