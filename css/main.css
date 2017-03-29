@@ -721,7 +721,7 @@ ul li {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #000;
+    color: #fff;
 }
 #countdown-timer:before,
 #countdown-timer:after {
